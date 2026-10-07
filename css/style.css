@@ -29,6 +29,7 @@ a {
   text-decoration: none;
 }
 
+
 /* =========================
    HEADER
 ========================= */
@@ -77,6 +78,7 @@ nav a:hover {
   color: var(--ink);
 }
 
+
 /* =========================
    MOBILE MENU BUTTON
 ========================= */
@@ -102,6 +104,7 @@ nav a:hover {
   border-radius: 999px;
   transition: .25s ease;
 }
+
 
 /* =========================
    SHARED
@@ -151,6 +154,7 @@ h2 {
 .secondary {
   border: 1px solid var(--line);
 }
+
 
 /* =========================
    HERO
@@ -282,6 +286,7 @@ h1 em {
   color: var(--sage);
 }
 
+
 /* =========================
    PRODUCT
 ========================= */
@@ -359,6 +364,7 @@ h2 {
   font-size: 12px;
 }
 
+
 /* =========================
    BENEFITS
 ========================= */
@@ -381,25 +387,19 @@ h2 {
   max-width: 700px;
 }
 
-.benefits-intro {
-  max-width: 600px;
-  margin: 25px 0 65px;
-  color: rgba(255, 255, 255, .7);
-  line-height: 1.7;
-}
-
 .benefit-list {
   max-width: 1050px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 0 60px;
-  margin: auto;
+  margin: 65px auto 0;
 }
 
 .benefit-item {
   padding: 28px 0;
   border-top: 1px solid rgba(255, 255, 255, .16);
   display: flex;
+  align-items: flex-start;
   gap: 25px;
 }
 
@@ -410,16 +410,21 @@ h2 {
   min-width: 30px;
 }
 
-.benefit-item h3 {
-  margin: 0 0 8px;
-  font-size: 25px;
-}
-
 .benefit-item p {
   margin: 0;
-  color: rgba(255, 255, 255, .65);
+  color: rgba(255, 255, 255, .75);
   line-height: 1.6;
 }
+
+.hair-types {
+  max-width: 850px;
+  margin: 50px auto 0;
+  padding-top: 30px;
+  border-top: 1px solid rgba(255, 255, 255, .16);
+  color: rgba(255, 255, 255, .65);
+  line-height: 1.7;
+}
+
 
 /* =========================
    INGREDIENTS
@@ -455,7 +460,9 @@ h2 {
   padding: 25px;
   background: var(--white);
   border: 1px solid var(--line);
-  transition: transform .2s ease, box-shadow .2s ease;
+  transition:
+    transform .2s ease,
+    box-shadow .2s ease;
 }
 
 .ingredient-card:hover {
@@ -484,7 +491,7 @@ h2 {
   line-height: 1.6;
 }
 
-.ingredients-note {
+.full-ingredients {
   max-width: 900px;
   margin: 55px auto 0;
   padding-top: 25px;
@@ -493,6 +500,23 @@ h2 {
   font-size: 12px;
   line-height: 1.7;
 }
+
+.full-ingredients h3 {
+  margin: 0 0 12px;
+  color: var(--ink);
+  font-size: 20px;
+}
+
+.full-ingredients p {
+  margin: 0 0 15px;
+}
+
+.product-warning {
+  font-weight: 700;
+  letter-spacing: .08em;
+  color: var(--ink);
+}
+
 
 /* =========================
    STORY
@@ -526,6 +550,13 @@ h2 {
   max-width: 600px;
 }
 
+.story-signoff {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  color: var(--ink) !important;
+}
+
+
 /* =========================
    LAUNCH
 ========================= */
@@ -543,6 +574,7 @@ h2 {
   line-height: 1.7;
 }
 
+
 /* =========================
    CONNECT
 ========================= */
@@ -558,14 +590,9 @@ h2 {
   margin: auto;
 }
 
-.connect-text {
-  max-width: 600px;
-  margin: 25px auto 40px;
-  color: var(--muted);
-  line-height: 1.7;
-}
-
 .social-links {
+  max-width: 900px;
+  margin: 45px auto 0;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -573,12 +600,22 @@ h2 {
 }
 
 .social-link {
-  padding: 13px 20px;
+  min-width: 180px;
+  padding: 15px 20px;
   border: 1px solid var(--line);
   border-radius: 999px;
   font-size: 13px;
   font-weight: 600;
   transition: .2s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.social-link span {
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 400;
 }
 
 .social-link:hover {
@@ -586,6 +623,11 @@ h2 {
   color: white;
   transform: translateY(-2px);
 }
+
+.social-link:hover span {
+  color: rgba(255, 255, 255, .7);
+}
+
 
 /* =========================
    FOOTER
@@ -600,7 +642,7 @@ footer {
   font-size: 13px;
 }
 
-footer div {
+footer > div:first-child {
   display: flex;
   flex-direction: column;
   gap: 5px;
@@ -610,13 +652,19 @@ footer span {
   color: var(--muted);
 }
 
-footer a {
+.footer-socials {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-socials a {
   transition: color .2s ease;
 }
 
-footer a:hover {
-  color: var(--ink);
+.footer-socials a:hover {
+  color: var(--sage);
 }
+
 
 /* =========================
    TABLET
@@ -629,6 +677,7 @@ footer a:hover {
   }
 
 }
+
 
 /* =========================
    MOBILE
@@ -665,6 +714,7 @@ footer a:hover {
     border-bottom: 1px solid var(--line);
   }
 
+
   /* Hamburger → X */
 
   .menu-toggle.active span:nth-child(1) {
@@ -678,6 +728,7 @@ footer a:hover {
   .menu-toggle.active span:nth-child(3) {
     transform: translateY(-7px) rotate(-45deg);
   }
+
 
   .hero {
     grid-template-columns: 1fr;
@@ -706,10 +757,16 @@ footer a:hover {
   footer {
     flex-direction: column;
     align-items: flex-start;
-    gap: 20px;
+    gap: 25px;
+  }
+
+  .footer-socials {
+    flex-wrap: wrap;
+    gap: 15px;
   }
 
 }
+
 
 /* =========================
    SMALL PHONES
@@ -766,6 +823,11 @@ footer a:hover {
 
   .social-link {
     width: 100%;
+  }
+
+  .footer-socials {
+    flex-direction: column;
+    gap: 10px;
   }
 
 }
