@@ -1,4 +1,14 @@
-// V1 intentionally has no checkout or backend yet.
-// Those can be added once the owner confirms pricing, launch date,
-// ordering method, delivery details and payment requirements.
-console.log('Ezinhle Hair Care — V1 loaded');
+const menuToggle = document.querySelector(".menu-toggle");
+const mainNav = document.querySelector("#main-nav");
+
+menuToggle.addEventListener("click", () => {
+  const isOpen = mainNav.classList.toggle("open");
+
+  menuToggle.classList.toggle("active", isOpen);
+
+  menuToggle.setAttribute("aria-expanded", isOpen);
+  menuToggle.setAttribute(
+    "aria-label",
+    isOpen ? "Close navigation menu" : "Open navigation menu"
+  );
+});
